@@ -4,11 +4,6 @@ import {todolistApi} from "../api/todolist-api";
 export default {
     title: 'API'
 }
-
-const settings = {
-    withCredentials: true
-}
-
 export const GetTodolists = () => {
     const [state, setState] = useState<any>(null)
     useEffect(() => {
@@ -86,7 +81,7 @@ export const UpdateTodolistTask = () => {
         const todoId = '34a01fab-3f84-4f08-89fa-a460c9240377'
         const taskId = 'd9e68b0a-7543-4da1-b36c-2fe4997f657a'
         const title = 'This is new title for task'
-        todolistApi.updateTodolistTask(todoId, taskId, title)
+        todolistApi.updateTodolistTask(todoId, taskId, title )
             .then((res) => setState(res.data))
     }, [])
     return <div>{JSON.stringify(state)}</div>
