@@ -33,8 +33,6 @@ export const todolistApi = {
 }
 
 
-
-
 export type TodoListType = {
     id: string,
     title: string,
